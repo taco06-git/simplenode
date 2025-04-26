@@ -1,11 +1,11 @@
 
 pipeline {
     agent {
-        docker {
-            image 'node:18'
-            args '-v /var/run/docker.sock:/var/run/docker.sock'
-        }
+    docker {
+        image 'utube/nodedockercli'
+        args '-v /var/run/docker.sock:/var/run/docker.sock'
     }
+}
 
     environment {
         DOCKER_IMAGE = 'utube/agentcontainer'
